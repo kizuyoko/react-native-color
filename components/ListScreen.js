@@ -7,7 +7,8 @@ import colors from '../data/colors.js';
 const ListScreen = () => {
   return ( 
     <View style={[styles.layout, listStyles.layout]}>
-      <Text style={[styles.title, listStyles.title]}>Color List</Text>
+      <Text style={[styles.title, listStyles.text]}>Color List</Text>
+      <Text style={[styles.text, listStyles.text]}>Click the colors</Text>
       <FlatList 
         data={colors}
         renderItem={({ item }) => (
@@ -16,6 +17,7 @@ const ListScreen = () => {
             name={item.name}
             hex={item.hex}
             rgb={item.rgb}
+            text={item.text}
           />
         )}
       />
@@ -27,7 +29,7 @@ const listStyles = StyleSheet.create({
   layout: {
     justifyContent: 'top'
   },
-  title: {
+  text: {
     textAlign: 'left'
   }
 });

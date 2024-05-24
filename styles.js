@@ -27,6 +27,8 @@ const styles = StyleSheet.create({
     height: 80,
     flex: 1,
     backgroundColor: 'transparent',
+    borderWidth: 1,
+    borderColor: '#ccc'
   },
   content: {
     paddingLeft: 20,
@@ -38,6 +40,9 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
+  },
+  colorText: {
+    margin: 16
   }
 });
 
