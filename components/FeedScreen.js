@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { View, Text } from 'react-native';
-import styles from './styles.js';
+import styles from '../styles.js';
 
 const FeedScreen = () => {
   return ( 

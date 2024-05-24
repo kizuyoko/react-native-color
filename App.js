@@ -2,7 +2,7 @@ import * as React from 'react';
 import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'; 
-import styles from './components/styles.js';
+import styles from './styles.js';
 import MainNavigator from './components/MainNavigator.js';
 
 const WelcomeScreen = (props) => {
