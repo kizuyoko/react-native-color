@@ -1,14 +1,38 @@
 import { View, Text, Button, StyleSheet, TextInput } from 'react-native';
 import styles from "../styles";
 import colors from '../data/colors';
+import { useState } from 'react';
 
 const AddNewScreen = (props) => {
+  const [enteredName, setEnteredName] = useState('');
+  const [enteredHex, setEnteredHex] = useState('');
+  const [enteredRgb, setEnteredRgb] = useState('');
+  const [enteredText, setEnteredText] = useState('');
+  
+  let newColor = {};
+
+  const nameChangeHandler = event => {
+    setEnteredName(event.target.value); 
+  };
+
+  const hexChangeHandler = event => {
+    setEnteredHex(event.target.value); 
+  };
+
+  const rgbChangeHandler = event => {
+    setEnteredRgb(event.target.value); 
+  };
+
+  const textChangeHandler = event => {
+    setEnteredText(event.target.value); 
+  };
+
   const onSubmit = () => {
-    const newColor = {
-      name: 'Orange',
-      hex: 'FFA500',
-      rgb: '255, 165, 0',
-      text: 'Oh, I have not made this text...'
+    newColor = {
+      name: enteredName,
+      hex: enteredHex,
+      rgb: enteredRgb,
+      text: enteredText
     }
 
     colors.push(newColor);
@@ -21,17 +45,26 @@ const AddNewScreen = (props) => {
       <TextInput
         style={inputStyles.input} 
         placeholder='Name'
-        value=''
+        value={enteredName}
+        onChange={nameChangeHandler}
       />
       <TextInput
         style={inputStyles.input} 
         placeholder='HEX'
-        value=''
+        value={enteredHex}
+        onChange={hexChangeHandler}
       />
       <TextInput
         style={inputStyles.input} 
         placeholder='RGB'
-        value=''
+        value={enteredRgb}
+        onChange={rgbChangeHandler}
+      />
+      <TextInput
+        style={inputStyles.input} 
+        placeholder='Text'
+        value={enteredText}
+        onChange={textChangeHandler}
       />
       <Button
         style={inputStyles.button} 
