@@ -1,9 +1,17 @@
 import { View, Text, Button, StyleSheet, TextInput } from 'react-native';
 import styles from "../styles";
+import colors from '../data/colors';
 
 const AddNewScreen = (props) => {
   const onSubmit = () => {
-    
+    const newColor = {
+      name: 'Orange',
+      hex: 'FFA500',
+      rgb: '255, 165, 0',
+      text: 'Oh, I have not made this text...'
+    }
+
+    colors.push(newColor);
     props.navigation.navigate('List');
   }
 
