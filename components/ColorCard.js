@@ -1,4 +1,4 @@
-import { View, Text, Pressable } from 'react-native';
+import { View, Text, Pressable, Button } from 'react-native';
 import styles from '../styles.js';
 import { useState } from 'react';
 
@@ -18,6 +18,7 @@ const ColorCard = (props) => {
           <Text styles={styles.colorName}>{props.name}</Text>
           <Text styles={styles.text}>HEX: #{props.hex}</Text>
           <Text styles={styles.text}>RGB: rgb({props.rgb})</Text>
+          <Button title='Delete' onPress={props.onDeleteItem.bind(this, props.id)} />
         </View>
       </View>
 
