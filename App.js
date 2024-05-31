@@ -14,10 +14,13 @@ const WelcomeScreen = (props) => {
       <Text style={styles.text}>
         I am glad you're here. Explore, enjoy!
       </Text>
-      <Button
-        title="Go to Main Page"
-        onPress={() => props.navigation.navigate('Main')}
-      />
+      <View style={styles.buttonContainer}>
+        <Button
+          title="Go to Main Page"
+          onPress={() => props.navigation.navigate('Main')}
+          color='darkblue'
+        />
+      </View>
     </View>  
   );    
 };

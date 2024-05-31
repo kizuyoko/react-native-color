@@ -66,11 +66,14 @@ const AddNewScreen = (props) => {
         value={enteredText}
         onChange={textChangeHandler}
       />
-      <Button
-        style={inputStyles.button} 
-        title="Submit"
-        onPress={onSubmit}
-      />
+      <View style={styles.buttonContainer}>
+        <Button
+          style={inputStyles.button} 
+          title="Submit"
+          onPress={onSubmit}
+          color='darkgreen'
+          />
+      </View>
     </View>  
 
   );

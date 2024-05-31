@@ -18,7 +18,13 @@ const ColorCard = (props) => {
           <Text styles={styles.colorName}>{props.name}</Text>
           <Text styles={styles.text}>HEX: #{props.hex}</Text>
           <Text styles={styles.text}>RGB: rgb({props.rgb})</Text>
-          <Button title='Delete' onPress={props.onDeleteItem.bind(this, props.id)} />
+          <View style={{marginTop: 8}}>
+            <Button 
+              title='Delete' 
+            onPress={props.onDeleteItem.bind(this, props.id)} 
+              color='darkred'
+            />
+          </View>
         </View>
       </View>
 

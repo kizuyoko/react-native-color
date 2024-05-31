@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
   layout: {
     flex: 1,
     justifyContent: 'center',
-    padding: 8,
+    padding: 16,
   },
   title: {
     margin: 8,
@@ -43,7 +43,10 @@ const styles = StyleSheet.create({
   },
   colorText: {
     margin: 16
-  }
+  },
+  buttonContainer: {
+    margin: 8,
+  },
 });
 
 export default styles;
