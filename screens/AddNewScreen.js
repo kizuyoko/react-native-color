@@ -96,7 +96,8 @@ const AddNewScreen = (props) => {
       text: enteredText
     }
 
-    colors.push(newColor);
+    colors.unshift(newColor);
+
     clearNewColor();
     props.navigation.navigate('List');
   }
