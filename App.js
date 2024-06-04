@@ -3,7 +3,7 @@ import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'; 
 import styles from './styles.js';
-import MainNavigator from './components/MainNavigator.js';
+import MainNavigator from './screens/MainNavigator.js';
 
 const WelcomeScreen = (props) => {
   return (

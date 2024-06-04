@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { View, Text, StyleSheet, FlatList } from 'react-native';
 import styles from '../styles.js';
-import ColorCard from './ColorCard.js';
+import ColorCard from '../components/ColorCard.js';
 import colors from '../data/colors.js';
 
 const ListScreen = (props) => {
