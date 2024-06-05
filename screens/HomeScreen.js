@@ -21,7 +21,7 @@ const HomeScreen = () => {
           <View style={[colorStyles.colorIcon, {backgroundColor: `#${todaysColor.hex}`}]}></View>
         </View>
         <BodyText text={`HEX: #${todaysColor.hex}`} />
-        <BodyText text={`RGB: #${todaysColor.rgb}`} />
+        <BodyText text={`RGB: rgb(${todaysColor.rgb})`} />
         <BodyText text={todaysColor.text} />
       </View>
     );

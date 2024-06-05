@@ -28,7 +28,7 @@ const ColorCard = (props) => {
           />
           <BodyText 
             style={styles.textLeft}
-            text={`RGB: #${props.rgb}`}
+            text={`RGB: rgb(${props.rgb})`}
           />
           <AlertButton 
             title='Delete'
