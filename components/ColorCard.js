@@ -1,6 +1,9 @@
 import { View, Text, Pressable, Button } from 'react-native';
 import styles from '../styles.js';
 import { useState } from 'react';
+import TitleText from './ui/TitleText.js';
+import BodyText from './ui/BodyText.js';
+import AlertButton from './ui/AlertButton.js';
 
 const ColorCard = (props) => {
   const [showText, setShowText] = useState(false);
@@ -15,22 +18,31 @@ const ColorCard = (props) => {
           <View style={[styles.colorIcon, {backgroundColor: `#${props.hex}`}]}></View>
         </Pressable>
         <View style={styles.content}>
-          <Text styles={styles.colorName}>{props.name}</Text>
-          <Text styles={styles.text}>HEX: #{props.hex}</Text>
-          <Text styles={styles.text}>RGB: rgb({props.rgb})</Text>
-          <View style={{marginTop: 8}}>
-            <Button 
-              title='Delete' 
+          <TitleText 
+            style={styles.textLeft}
+            text={props.name}
+          />
+          <BodyText 
+            style={styles.textLeft}
+            text={`HEX: #${props.hex}`}
+          />
+          <BodyText 
+            style={styles.textLeft}
+            text={`RGB: #${props.rgb}`}
+          />
+          <AlertButton 
+            title='Delete'
             onPress={props.onDeleteItem.bind(this, props.id)} 
-              color='darkred'
-            />
-          </View>
+          />
         </View>
       </View>
 
       {showText &&
         <View style={styles.card}>
-          <Text styles={styles.text}>{props.text}</Text>
+          <BodyText 
+            style={styles.textLeft}
+            text={props.text}
+          />
         </View>
       }
     </View>

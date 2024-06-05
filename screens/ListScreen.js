@@ -3,6 +3,8 @@ import { View, Text, StyleSheet, FlatList } from 'react-native';
 import styles from '../styles.js';
 import ColorCard from '../components/ColorCard.js';
 import colors from '../data/colors.js';
+import TitleText from '../components/ui/TitleText.js';
+import BodyText from '../components/ui/BodyText.js';
 
 const ListScreen = (props) => {
   const [colorList, setColorList] = useState(colors);
@@ -15,8 +17,14 @@ const ListScreen = (props) => {
 
   return ( 
     <View style={[styles.layout, listStyles.layout]}>
-      <Text style={[styles.title, listStyles.text]}>Color List</Text>
-      <Text style={[styles.text, listStyles.text]}>Click the colors</Text>
+      <TitleText 
+        text="Color List" 
+        style={listStyles.text} 
+      />
+      <BodyText 
+          style={listStyles.text}
+          text='Click the colors'
+        />
       <FlatList 
         data={colorList}
         renderItem={({ item }) => (

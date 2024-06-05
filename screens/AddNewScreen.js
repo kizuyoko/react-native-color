@@ -1,7 +1,10 @@
-import { View, Text, Button, StyleSheet, TextInput, Alert } from 'react-native';
+import { View, Button, StyleSheet, TextInput, Alert } from 'react-native';
 import styles from "../styles";
 import colors from '../data/colors';
 import { useState } from 'react';
+import TitleText from '../components/ui/TitleText.js';
+import AlertButton from '../components/ui/AlertButton.js';
+import PrimaryButton from '../components/ui/PrimarylButton.js';
 
 const AddNewScreen = (props) => {
   const [enteredName, setEnteredName] = useState('');
@@ -104,7 +107,7 @@ const AddNewScreen = (props) => {
 
   return (
     <View style={[styles.layout, listStyles.layout]}>
-      <Text style={[styles.title, listStyles.text]}>Add New</Text>
+      <TitleText text="Add New" style={listStyles.text} />
       <TextInput
         style={inputStyles.input} 
         placeholder='Name'
@@ -123,22 +126,16 @@ const AddNewScreen = (props) => {
         value={enteredText}
         onChange={textChangeHandler}
       />
-      <View style={styles.buttonContainer}>
-        <Button
-          style={inputStyles.button} 
-          title="Clear"
-          onPress={clearNewColor}
-          color='darkred'
-        />
-      </View>
-      <View style={styles.buttonContainer}>  
-        <Button
-          style={inputStyles.button} 
-          title="Submit"
-          onPress={onSubmit}
-          color='darkgreen'
-        />  
-      </View>
+      <AlertButton 
+        title="Clear"
+        onPress={clearNewColor}
+        btnStyle={inputStyles.button}
+      />
+      <PrimaryButton 
+        title="Add New"
+        onPress={onSubmit}
+        btnStyle={inputStyles.button}
+      />
     </View>  
 
   );
@@ -160,7 +157,8 @@ const inputStyles =  StyleSheet.create({
     margin: 10,
   },
   button: {
-    margin:20
+    margin: 8,
+    marginBottom: 0
   }
 });
 

@@ -2,6 +2,8 @@ import * as React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import styles from '../styles.js';
 import colors from '../data/colors.js';
+import TitleText from '../components/ui/TitleText.js';
+import BodyText from '../components/ui/BodyText.js';
 
 const HomeScreen = () => {
   const colorLength = colors.length;
@@ -10,21 +12,26 @@ const HomeScreen = () => {
 
   return ( 
       <View style={styles.layout}>
-        <Text style={styles.title}>Today's Color is: </Text>
-        <Text style={[styles.title, colorStyles.colorName]}>{todaysColor.name}</Text>
+        <TitleText text="Today's Color is: " />
+        <BodyText 
+          style={colorStyles.colorName}
+          text={todaysColor.name}
+        />
         <View style={colorStyles.colorIconCover}>
           <View style={[colorStyles.colorIcon, {backgroundColor: `#${todaysColor.hex}`}]}></View>
         </View>
-        <Text style={styles.text}>HEX: #{todaysColor.hex}</Text>
-        <Text style={styles.text}>RGB: ({todaysColor.rgb})</Text>
-        <Text style={styles.text}>{todaysColor.text}</Text>
+        <BodyText text={`HEX: #${todaysColor.hex}`} />
+        <BodyText text={`RGB: #${todaysColor.rgb}`} />
+        <BodyText text={todaysColor.text} />
       </View>
     );
 }; 
 
 const colorStyles = StyleSheet.create({
   colorName: {
-    fontSize:30
+    fontSize:30,
+    fontWeight: 'bold',
+    marginBottom: 0,
   },
   colorIconCover: {
     flexDirection: 'column',

@@ -47,6 +47,25 @@ const styles = StyleSheet.create({
   buttonContainer: {
     margin: 8,
   },
+  primaryButtonContainer: {
+    margin: 8,
+    backgroundColor: 'darkblue',
+    padding: 8,
+  },
+  alertButtonContainer: {
+    backgroundColor: 'darkred',
+    padding: 8,
+  },
+  button: {
+    color: 'white',
+    fontSize: 14,
+    textAlign: 'center',
+    textTransform: 'uppercase'
+  },
+  textLeft: {
+    textAlign: 'left',
+    margin: 0
+  },
 });
 
 export default styles;

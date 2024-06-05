@@ -4,23 +4,19 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack'; 
 import styles from './styles.js';
 import MainNavigator from './screens/MainNavigator.js';
+import TitleText from './components/ui/TitleText.js';
+import BodyText from './components/ui/BodyText.js';
+import PrimaryButton from './components/ui/PrimarylButton.js';
 
 const WelcomeScreen = (props) => {
   return (
     <View style={styles.layout}>
-      <Text style={styles.title}>
-        Welcome!
-      </Text>
-      <Text style={styles.text}>
-        I am glad you're here. Explore, enjoy!
-      </Text>
-      <View style={styles.buttonContainer}>
-        <Button
-          title="Go to Main Page"
-          onPress={() => props.navigation.navigate('Main')}
-          color='darkblue'
-        />
-      </View>
+      <TitleText text="Welcome!" />
+      <BodyText text="I am glad you're here. Explore, enjoy!!" />
+      <PrimaryButton 
+        onPress={() => props.navigation.navigate('Main')}
+        title="Go to Main Page"
+      />
     </View>  
   );    
 };
