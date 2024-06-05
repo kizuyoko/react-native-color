@@ -45,7 +45,8 @@ const ListScreen = (props) => {
 
 const listStyles = StyleSheet.create({
   layout: {
-    justifyContent: 'top'
+    justifyContent: 'top',
+    marginTop: 40
   },
   text: {
     textAlign: 'left'

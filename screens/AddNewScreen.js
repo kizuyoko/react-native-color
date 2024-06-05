@@ -106,7 +106,7 @@ const AddNewScreen = (props) => {
   }
 
   return (
-    <View style={[styles.layout, listStyles.layout]}>
+    <View style={styles.layout}>
       <TitleText text="Add New" style={listStyles.text} />
       <TextInput
         style={inputStyles.input} 
@@ -142,9 +142,6 @@ const AddNewScreen = (props) => {
 };
 
 const listStyles = StyleSheet.create({
-  layout: {
-    justifyContent: 'top'
-  },
   text: {
     textAlign: 'left'
   }

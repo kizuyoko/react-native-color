@@ -24,9 +24,21 @@ const MainNavigator = () => {
         },
       })}
     >
-      <Tab.Screen name='Home' component={HomeScreen} />
-      <Tab.Screen name='List' component={ListScreen} />
-      <Tab.Screen name='Add New' component={AddNewScreen} />
+      <Tab.Screen 
+        name='Home' 
+        component={HomeScreen} 
+        options={{ headerShown: false }} 
+      />
+      <Tab.Screen 
+        name='List' 
+        component={ListScreen} 
+        options={{ headerShown: false }} 
+      />
+      <Tab.Screen 
+        name='Add New' 
+        component={AddNewScreen}
+        options={{ headerShown: false }}  
+      />
     </Tab.Navigator>
   );
 };
